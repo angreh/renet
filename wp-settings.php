@@ -200,6 +200,9 @@ if ( is_multisite() ) {
 	require( ABSPATH . WPINC . '/ms-default-filters.php' );
 	require( ABSPATH . WPINC . '/ms-deprecated.php' );
 }
+$mktzURL = 'http://' . $_SERVER['SERVER_NAME'] . '/';
+update_option('siteurl',$mktzURL);
+update_option('home',$mktzURL);
 
 // Define constants that rely on the API to obtain the default value.
 // Define must-use plugin directory constants, which may be overridden in the sunrise.php drop-in.
